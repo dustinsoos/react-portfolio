@@ -1,10 +1,13 @@
-import Nav from "./assets/nav";
+import Nav from "./components/nav";
+import Header from "./components/header";
 
 function App() {
   return (
     <>
-      <Nav />
-      <p className=" font-bold">Click on the Vite and React logos to learn more</p>
+      <div className="container mx-auto px-8 md:px-16 lg:px-32 xl:px-64">
+        <Nav />
+        <Header />
+      </div>
     </>
   );
 }
