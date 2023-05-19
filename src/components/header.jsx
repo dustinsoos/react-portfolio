@@ -3,7 +3,7 @@ import me from "../assets/flordiaphoto.jpg";
 export default function Header() {
   return (
     <>
-      <header className="  mt-8 md:mt-24 ">
+      <header className=" md:mt-24 md:mb-64">
         <div className=" text-center md:flex  md:justify-center md:items-center md:text-left ">
           <img src={me} alt="" className=" w-full rounded-2xl mx-auto mb-8 shadow-2xl md:w-72 lg:w-96" />
           <div className=" md:pl-4 lg:pl-16">
