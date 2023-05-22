@@ -23,25 +23,6 @@ export default function Main() {
 
   return (
     <>
-      <section id="skills">
-        <h2 className=" text-4xl mt-32 text-center "> Technical Skills</h2>
-
-        <div className=" mt-12 flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
-          {/* <h3 className=" text-xl md:text-2xl lg:text-3xl font-medium">Frontend:</h3> */}
-          <img src={js} alt="javascript-icon" className=" w-8 md:w-12 lg:w-16 " />
-          <img src={html} alt="html-icon" className=" w-8 md:w-12 lg:w-16" />
-          <img src={css} alt="css-icon" className=" w-8 md:w-12 lg:w-16" />
-          <img src={react} alt="react-icon" className=" w-8 md:w-12 lg:w-16" />
-          <img src={bootstrap} alt="bootstrap-icon" className=" w-8 md:w-12 lg:w-16" />
-          <img src={figma} alt="figma-icon" className=" w-8 md:w-12 lg:w-16" />
-          <img src={git} alt="figma-icon" className=" w-8 md:w-12 lg:w-16" />
-          <img src={github} alt="figma-icon" className=" w-8 md:w-12 lg:w-16" />
-          <img src={py} alt="figma-icon" className=" w-8 md:w-12 lg:w-16" />
-          <img src={db} alt="figma-icon" className=" w-8 md:w-12 lg:w-16" />
-          <img src={terminal} alt="figma-icon" className=" w-8 md:w-12 lg:w-16" />
-        </div>
-      </section>
-      <div className=" w-full mx-auto h-px bg-black mt-52"></div>
       <section id="projects" className=" md:mt-52 md:mb-80">
         <h2 className=" text-4xl mt-32 text-center ">Projects</h2>
         <div className="  md:h-fit mx-auto flex flex-col text-center items-center justify-center   md:flex md:flex-row mt-12 md:w-full shadow-xl shadow-black/50  ">
@@ -118,6 +99,26 @@ export default function Main() {
         </div>
       </section>
       <div className=" w-full mx-auto h-px bg-black mt-52"></div>
+      <section id="skills">
+        <h2 className=" text-4xl mt-32 text-center "> Technical Skills</h2>
+
+        <div className=" mt-12 flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16 ">
+          {/* <h3 className=" text-xl md:text-2xl lg:text-3xl font-medium">Frontend:</h3> */}
+          <img src={js} alt="javascript-icon" className=" w-8 md:w-12 lg:w-16" />
+          <img src={html} alt="html-icon" className=" w-8 md:w-12 lg:w-16 " />
+          <img src={css} alt="css-icon" className=" w-8 md:w-12 lg:w-16" />
+          <img src={react} alt="react-icon" className=" w-8 md:w-12 lg:w-16" />
+          <img src={bootstrap} alt="bootstrap-icon" className=" w-8 md:w-12 lg:w-16" />
+          <img src={figma} alt="figma-icon" className=" w-8 md:w-12 lg:w-16" />
+          <img src={git} alt="figma-icon" className=" w-8 md:w-12 lg:w-16" />
+          <img src={github} alt="figma-icon" className=" w-8 md:w-12 lg:w-16" />
+          <img src={py} alt="figma-icon" className=" w-8 md:w-12 lg:w-16" />
+          <img src={db} alt="figma-icon" className=" w-8 md:w-12 lg:w-16" />
+          <img src={terminal} alt="figma-icon" className=" w-8 md:w-12 lg:w-16" />
+        </div>
+      </section>
+
+      <div className=" w-full mx-auto h-px bg-black mt-52"></div>
       <section id="contact" className=" mt-52 mb-80">
         <h2 className=" text-4xl mt-32 text-center mb-12">Get In Touch</h2>
         <form className="max-w-md mx-auto border-black border-2 p-8" onSubmit={handleSubmit}>
@@ -161,6 +162,7 @@ export default function Main() {
           </div>
         </form>
       </section>
+      <div className=" w-full mx-auto h-px bg-black mt-24"></div>
     </>
   );
 }
