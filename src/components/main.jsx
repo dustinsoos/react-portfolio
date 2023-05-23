@@ -32,7 +32,7 @@ export default function Main() {
             <p className=" text-md font-medium pt-4 pb-4">React ~ Tailwind CSS</p>
             <p className=" pb-4">A portfolio showcasing my technical skills.</p>
             <a
-              href="https://www.google.com/"
+              href="https://dustinsoos.github.io/react-portfolio/"
               target="_blank"
               rel="noopener noreferrer"
               className=" bg-black px-8 cursor-pointer text-lg text-white font-semibold hover:underline hover:text-black hover:bg-white"
