@@ -16,6 +16,7 @@ import simon from "../assets/simonjquery.jpeg";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 emailjs.init("YOUR_USER_ID");
 
@@ -32,6 +33,8 @@ export default function Main() {
     message: Yup.string().required("Message is required"),
   });
 
+  const [submissionStatus, setSubmissionStatus] = useState(null);
+
   const handleSubmit = (values, { resetForm }) => {
     const templateParams = {
       from_name: values.name,
@@ -43,9 +46,11 @@ export default function Main() {
       function (response) {
         console.log("SUCCESS!", response.status, response.text);
         resetForm();
+        setSubmissionStatus("success");
       },
       function (error) {
         console.log("FAILED...", error);
+        setSubmissionStatus("error");
       }
     );
   };
@@ -199,6 +204,10 @@ export default function Main() {
                 Submit
               </button>
             </div>
+            {submissionStatus === "success" && (
+              <div className="  shadow-black/80 bg-green-500 shadow-md p-10 text-center mt-12">Message submitted successfully!</div>
+            )}
+            {submissionStatus === "error" && <div className=" bg-red-500 p-10 text-center mt-12">Error submitting the message. Please try again.</div>}
           </Form>
         </Formik>
       </section>
