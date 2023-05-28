@@ -13,12 +13,41 @@ import reactPort from "../assets/react-portfolio.jpeg";
 import littlelemon from "../assets/littlelemon2.jpeg";
 import diceGame from "../assets/dicegame.jpeg";
 import simon from "../assets/simonjquery.jpeg";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import emailjs from "@emailjs/browser";
+
+emailjs.init("YOUR_USER_ID");
 
 export default function Main() {
-  const handleSubmit = (event) => {
-    const email = "dustinmsoos@gmail.com";
-    event.preventDefault();
-    window.location.href = `mailto:${email}`;
+  const initialValues = {
+    name: "",
+    email: "",
+    message: "",
+  };
+
+  const validationSchema = Yup.object({
+    name: Yup.string().required("Name is required"),
+    email: Yup.string().email("Invalid email address").required("Email is required"),
+    message: Yup.string().required("Message is required"),
+  });
+
+  const handleSubmit = (values, { resetForm }) => {
+    const templateParams = {
+      from_name: values.name,
+      from_email: values.email,
+      message: values.message,
+    };
+
+    emailjs.send("service_pshoqk8", "template_wvds2ar", templateParams, "dy-_8VK0GEzEgyCEd").then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+        resetForm();
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
   };
 
   return (
@@ -121,46 +150,57 @@ export default function Main() {
       <div className=" w-full mx-auto h-px bg-black mt-52"></div>
       <section id="contact" className=" mt-52 mb-80">
         <h2 className=" text-4xl mt-32 text-center mb-12">Get In Touch</h2>
-        <form className="max-w-md mx-auto border-black border-2 p-8" onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label className="block text-black text-sm font-bold mb-2" htmlFor="name">
-              Name:
-            </label>
-            <input
-              className="appearance-none border border-white rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:border-gray-300 bg-transparent shadow-black/50 shadow-md"
-              id="name"
-              type="text"
-              placeholder="Enter your name"
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-black text-sm font-bold mb-2" htmlFor="email">
-              Email:
-            </label>
-            <input
-              className="appearance-none border border-white rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:border-gray-300 bg-transparent shadow-black/50 shadow-md"
-              id="email"
-              type="email"
-              placeholder="example@email.com"
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-black text-sm font-bold mb-2" htmlFor="message">
-              Message:
-            </label>
-            <textarea
-              className="appearance-none border border-white rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:border-gray-300 bg-transparent shadow-black/50 shadow-md"
-              id="message"
-              rows="4"
-              placeholder="Enter your message"
-            ></textarea>
-          </div>
-          <div className="flex justify-center">
-            <button className="bg-black px-8 cursor-pointer text-lg text-white font-semibold hover:underline hover:text-black hover:bg-white " type="submit">
-              Submit
-            </button>
-          </div>
-        </form>
+        <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
+          <Form className="max-w-md mx-auto border-black border-2 p-8">
+            <div className="mb-4">
+              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+                Name
+              </label>
+              <Field
+                className="appearance-none border border-white rounded w-full py-2 px-3 text-black leading-tight focus:outline-none  focus:border-gray-300 bg-transparent shadow-black/50 shadow-md"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your name"
+              />
+              <ErrorMessage component="p" name="name" className="text-red-500 text-xs mt-1" />
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                Email
+              </label>
+              <Field
+                className="appearance-none border border-white rounded w-full py-2 px-3 text-black leading-tight focus:outline-none  focus:border-gray-300 bg-transparent shadow-black/50 shadow-md"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+              />
+              <ErrorMessage component="p" name="email" className="text-red-500 text-xs mt-1" />
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
+                Message
+              </label>
+              <Field
+                className="appearance-none border border-white rounded w-full py-2 px-3 text-black leading-tight focus:outline-none  focus:border-gray-300 bg-transparent shadow-black/50 shadow-md"
+                as="textarea"
+                name="message"
+                id="message"
+                placeholder="Enter your message"
+              />
+              <ErrorMessage component="p" name="message" className="text-red-500 text-xs mt-1" />
+            </div>
+            <div className="flex items-center justify-between">
+              <button
+                className="bg-black px-8 cursor-pointer text-lg mx-auto text-white font-semibold hover:underline hover:text-black hover:bg-white "
+                type="submit"
+              >
+                Submit
+              </button>
+            </div>
+          </Form>
+        </Formik>
       </section>
       <div className=" w-full mx-auto h-px bg-black mt-24"></div>
     </>
