@@ -205,9 +205,11 @@ export default function Main() {
               </button>
             </div>
             {submissionStatus === "success" && (
-              <div className="  shadow-black/80 bg-green-500 shadow-md p-10 text-center mt-12">Message submitted successfully!</div>
+              <div className="   bg-green-500 shadow-black/50 shadow-xl font-medium  p-4 md:p-10 text-center mt-12">Message submitted successfully!</div>
             )}
-            {submissionStatus === "error" && <div className=" bg-red-500 p-10 text-center mt-12">Error submitting the message. Please try again.</div>}
+            {submissionStatus === "error" && (
+              <div className=" bg-red-500 shadow-black/50 shadow-xl p-4 md:p-10 text-center mt-12">Error submitting the message. Please try again.</div>
+            )}
           </Form>
         </Formik>
       </section>
