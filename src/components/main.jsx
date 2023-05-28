@@ -18,8 +18,6 @@ import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
-emailjs.init("YOUR_USER_ID");
-
 export default function Main() {
   const initialValues = {
     name: "",
@@ -42,7 +40,7 @@ export default function Main() {
       message: values.message,
     };
 
-    emailjs.send("service_pshoqk8", "template_wvds2ar", templateParams, "dy-_8VK0GEzEgyCEd").then(
+    emailjs.send("default_service", "template_wvds2ar", templateParams, "dy-_8VK0GEzEgyCEd").then(
       function (response) {
         console.log("SUCCESS!", response.status, response.text);
         resetForm();
