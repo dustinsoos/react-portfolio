@@ -62,7 +62,7 @@ export default function Main() {
           <div className=" text-center flex-col  pb-8 md:pb-0 w-1/2">
             <h3 className=" text-lg font-semibold underline">Little Lemon</h3>
             <p className=" text-md font-medium pt-4 pb-4">React ~ Tailwind CSS ~ NextJS</p>
-            <p className=" pb-4 "> Multi-page frontend application using NextJS. Custom Design, Forums, Easy Navigation</p>
+            <p className=" pb-4 "> Multi-page frontend application using NextJS. Custom Design, Forms, Easy Navigation</p>
             <a
               href="https://little-lemon-react-henna.vercel.app/"
               target="_blank"
