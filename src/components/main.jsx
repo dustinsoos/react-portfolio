@@ -9,8 +9,8 @@ import py from "../assets/python.svg";
 import db from "../assets/database-solid.svg";
 import github from "../assets/github.svg";
 import terminal from "../assets/terminal-solid.svg";
+import littleLemon from "../assets/little-lemon-project.jpeg";
 import reactPort from "../assets/react-portfolio.jpeg";
-import littlelemon from "../assets/littlelemon2.jpeg";
 import diceGame from "../assets/dicegame.jpeg";
 import simon from "../assets/simonjquery.jpeg";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -57,11 +57,27 @@ export default function Main() {
     <>
       <section id="projects" className=" md:mt-52 md:mb-80">
         <h2 className=" text-4xl mt-32 text-center ">Projects</h2>
+        <div className="  md:h-fit mx-auto flex flex-col text-center items-center justify-around  md:flex md:flex-row mt-12 md:w-full shadow-xl shadow-black/50 ">
+          <img src={littleLemon} alt="" className=" w-full md:w-1/2" />
+          <div className=" text-center flex-col  pb-8 md:pb-0 w-1/2">
+            <h3 className=" text-lg font-semibold underline">Little Lemon</h3>
+            <p className=" text-md font-medium pt-4 pb-4">React ~ Tailwind CSS ~ NextJS</p>
+            <p className=" pb-4 "> Multi-page frontend application using NextJS. Custom Design, Forums, Easy Navigation</p>
+            <a
+              href="https://little-lemon-react-henna.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" bg-black px-8 cursor-pointer text-lg text-white font-semibold hover:underline hover:text-black hover:bg-white"
+            >
+              Live Site
+            </a>
+          </div>
+        </div>
         <div className="  md:h-fit mx-auto flex flex-col text-center items-center justify-center   md:flex md:flex-row mt-12 md:w-full shadow-xl shadow-black/50  ">
           <img src={reactPort} alt="" className=" w-full md:w-1/2" />
           <div className=" text-center flex-col  pb-8 md:pb-0 w-1/2">
             <h3 className=" text-lg font-semibold underline">Portfolio Project</h3>
-            <p className=" text-md font-medium pt-4 pb-4">React ~ Tailwind CSS</p>
+            <p className=" text-md font-medium pt-4 pb-4">React ~ Tailwind CSS ~ ViteJS</p>
             <p className=" pb-4">A portfolio showcasing my technical skills.</p>
             <a
               href="https://dustinsoos.github.io/react-portfolio/"
@@ -73,25 +89,7 @@ export default function Main() {
             </a>
           </div>
         </div>
-        <div className="  md:h-fit mx-auto flex flex-col text-center items-center justify-around  md:flex md:flex-row mt-12 md:w-full shadow-xl shadow-black/50 ">
-          <img src={littlelemon} alt="" className=" w-full md:w-1/2" />
-          <div className=" text-center flex-col  pb-8 md:pb-0 w-1/2">
-            <h3 className=" text-lg font-semibold underline">Little Lemon</h3>
-            <p className=" text-md font-medium pt-4 pb-4">HTML ~ CSS</p>
-            <p className=" pb-4 ">
-              Based in Chicago, Illinois, Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. I
-              practiced using Semantic HTML structure
-            </p>
-            <a
-              href="https://dustinsoos.github.io/Little-Lemon-Project/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" bg-black px-8 cursor-pointer text-lg text-white font-semibold hover:underline hover:text-black hover:bg-white"
-            >
-              Live Site
-            </a>
-          </div>
-        </div>
+
         <div className="  md:h-fit mx-auto flex flex-col text-center items-center justify-around  md:flex md:flex-row mt-12 md:w-full shadow-xl shadow-black/50  ">
           <img src={diceGame} alt="" className="w-full md:w-1/2" />
           <div className=" text-center flex-col  pb-8 md:pb-0 ">
