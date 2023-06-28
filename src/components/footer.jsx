@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import gitHub from "../assets/github.svg";
+import gitHub from "../assets/github_icon.svg";
 import linkedIn from "../assets/linkedin.svg";
 
 export default function Footer() {
@@ -35,7 +35,7 @@ export default function Footer() {
           <div className=" pb-4 md:pb-0">
             <h3 className="text-xl font-medium underline">Social Media</h3>
             <a href="https://github.com/dustinsoos" target="_blank" rel="noopener noreferrer">
-              <img src={gitHub} alt="" className=" w-6 mx-auto mt-4" />
+              <img src={gitHub} alt="" className=" w-8 mx-auto mt-4" />
             </a>
             <a href="https://www.linkedin.com/in/dustin-soos-519483162/" target="_blank" rel="noopener noreferrer">
               <img src={linkedIn} alt="" className=" w-6 mx-auto mt-4" />
