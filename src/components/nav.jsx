@@ -17,22 +17,46 @@ export default function Nav() {
 
   return (
     <nav id="nav" className=" mt-8  ">
-      <FontAwesomeIcon icon={faBars} size="2xl" style={{ color: "#000000" }} onClick={toggleMenu} className=" block cursor-pointer md:hidden" />
-      <ul id="hamburger" className=" place-content-start justify-items-start mt-4 gap-2 md:visible md:flex md:gap-7 md:items-center md:justify-start hidden">
+      <FontAwesomeIcon
+        icon={faBars}
+        size="2xl"
+        style={{ color: "#000000" }}
+        onClick={toggleMenu}
+        className=" block cursor-pointer md:hidden"
+      />
+      <ul
+        id="hamburger"
+        className=" place-content-start justify-items-start mt-4 gap-2 md:visible md:flex md:gap-7 md:items-center md:justify-start hidden"
+      >
         <h3 className=" hidden text-4xl md:block ">DS</h3>
 
         <button className=" hover:underline">
-          <Link to="projects" onClick={handleIsClosed} smooth={true} duration={700}>
+          <Link
+            to="projects"
+            onClick={handleIsClosed}
+            smooth={true}
+            duration={700}
+          >
             Projects
           </Link>
         </button>
         <button className=" hover:underline">
-          <Link to="skills" onClick={handleIsClosed} smooth={true} duration={700}>
+          <Link
+            to="skills"
+            onClick={handleIsClosed}
+            smooth={true}
+            duration={700}
+          >
             Skills
           </Link>
         </button>
         <button className=" hover:underline">
-          <Link to="contact" onClick={handleIsClosed} smooth={true} duration={700}>
+          <Link
+            to="contact"
+            onClick={handleIsClosed}
+            smooth={true}
+            duration={700}
+          >
             Contact
           </Link>
         </button>

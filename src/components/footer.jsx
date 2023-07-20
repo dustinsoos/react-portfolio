@@ -12,7 +12,9 @@ export default function Footer() {
         <div className="  md:flex gap-2 md:gap-12 justify-start">
           <h3 className="  text-4xl pb-4 md:pb-0 ">DS</h3>
           <div className=" grid pb-4 md:pb-0">
-            <h3 className="text-xl font-medium underline mb-4">Doormat Navigation</h3>
+            <h3 className="text-xl font-medium underline mb-4">
+              Doormat Navigation
+            </h3>
             <button className=" hover:underline" onClick={handleScrollToTop}>
               To Top
             </button>
@@ -34,10 +36,18 @@ export default function Footer() {
           </div>
           <div className=" pb-4 md:pb-0">
             <h3 className="text-xl font-medium underline">Social Media</h3>
-            <a href="https://github.com/dustinsoos" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/dustinsoos"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={gitHub} alt="" className=" w-8 mx-auto mt-4" />
             </a>
-            <a href="https://www.linkedin.com/in/dustin-soos-519483162/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/dustin-soos-519483162/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={linkedIn} alt="" className=" w-6 mx-auto mt-4" />
             </a>
           </div>
