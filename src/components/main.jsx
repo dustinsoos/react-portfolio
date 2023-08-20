@@ -78,7 +78,7 @@ export default function Main() {
               {" "}
               This project is a dynamic website designed to provide an extensive
               repository of curated learning materials and tools specifically
-              tailored for aspiring and experienced frontend developers
+              tailored for aspiring and experienced frontend developers.
             </p>
             <a
               href="https://frontend-assets.vercel.app/"
@@ -100,7 +100,7 @@ export default function Main() {
             <p className=" pb-4 ">
               {" "}
               SPA frontend application using NextJS. Giving customers a quick
-              and easy way to reserve a table for their loved ones
+              and easy way to reserve a table for their loved ones.
             </p>
             <a
               href="https://little-lemon-react-henna.vercel.app/"
