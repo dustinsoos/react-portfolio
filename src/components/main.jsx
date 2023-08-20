@@ -11,8 +11,7 @@ import db from "../assets/sql_icon.svg";
 import github from "../assets/github_icon.svg";
 import littleLemon from "../assets/little-lemon-project.jpeg";
 import reactPort from "../assets/react-portfolio.jpeg";
-import diceGame from "../assets/dicegame.jpeg";
-import simon from "../assets/simonjquery.jpeg";
+import frontendAssets from "../assets/frontendassets.png";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
@@ -66,17 +65,43 @@ export default function Main() {
     <>
       <section id="projects" className=" md:mt-52 md:mb-80">
         <h2 className=" text-4xl mt-32 text-center ">Projects</h2>
-        <div className="  md:h-fit mx-auto flex flex-col text-center items-center justify-around  md:flex md:flex-row mt-12 md:w-full shadow-xl shadow-black/50 ">
+        <div className=" h-full   mx-auto flex flex-col items-center md:flex md:flex-row mt-12 md:w-full shadow-xl shadow-black/50 ">
+          <img src={frontendAssets} alt="" className=" w-full md:w-1/2" />
+          <div className=" text-center flex-col  pb-8 md:pb-0 ">
+            <h3 className=" text-lg font-semibold underline">
+              Frontend Assets
+            </h3>
+            <p className=" text-md font-medium pt-4 pb-4">
+              React ~ Tailwind CSS ~ NextJS
+            </p>
+            <p className=" mb-4 ">
+              {" "}
+              This project is a dynamic website designed to provide an extensive
+              repository of curated learning materials, tutorials, and tools
+              specifically tailored for aspiring and experienced frontend
+              developers
+            </p>
+            <a
+              href="https://frontend-assets.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" bg-black px-8 cursor-pointer text-lg text-white font-semibold hover:underline hover:text-black hover:bg-white"
+            >
+              Live Site
+            </a>
+          </div>
+        </div>
+        <div className=" h-full  mx-auto flex flex-col  items-center   md:flex md:flex-row mt-12 md:w-full shadow-xl shadow-black/50 ">
           <img src={littleLemon} alt="" className=" w-full md:w-1/2" />
-          <div className=" text-center flex-col  pb-8 md:pb-0 w-1/2">
+          <div className=" text-center flex-col  pb-8 md:pb-0 ">
             <h3 className=" text-lg font-semibold underline">Little Lemon</h3>
             <p className=" text-md font-medium pt-4 pb-4">
               React ~ Tailwind CSS ~ NextJS
             </p>
             <p className=" pb-4 ">
               {" "}
-              Multi-page frontend application using NextJS. Custom Design,
-              Forms, Easy Navigation
+              SPA frontend application using NextJS. Giving customers a quick
+              and easy way to reserve a table for their loved ones
             </p>
             <a
               href="https://little-lemon-react-henna.vercel.app/"
@@ -88,9 +113,9 @@ export default function Main() {
             </a>
           </div>
         </div>
-        <div className="  md:h-fit mx-auto flex flex-col text-center items-center justify-center   md:flex md:flex-row mt-12 md:w-full shadow-xl shadow-black/50  ">
+        <div className="h-full mx-auto flex flex-col  items-center justify-center   md:flex md:flex-row mt-12 md:w-full shadow-xl shadow-black/50  ">
           <img src={reactPort} alt="" className=" w-full md:w-1/2" />
-          <div className=" text-center flex-col  pb-8 md:pb-0 w-1/2">
+          <div className=" text-center flex-col  pb-8 md:pb-0 ">
             <h3 className=" text-lg font-semibold underline">
               Portfolio Project
             </h3>
@@ -100,51 +125,6 @@ export default function Main() {
             <p className=" pb-4">A portfolio showcasing my technical skills.</p>
             <a
               href="https://dustinsoos.github.io/react-portfolio/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" bg-black px-8 cursor-pointer text-lg text-white font-semibold hover:underline hover:text-black hover:bg-white"
-            >
-              Live Site
-            </a>
-          </div>
-        </div>
-
-        <div className="  md:h-fit mx-auto flex flex-col text-center items-center justify-around  md:flex md:flex-row mt-12 md:w-full shadow-xl shadow-black/50  ">
-          <img src={diceGame} alt="" className="w-full md:w-1/2" />
-          <div className=" text-center flex-col  pb-8 md:pb-0 ">
-            <h3 className=" text-lg font-semibold underline">Dice Game</h3>
-            <p className=" text-md font-medium pt-4 pb-4">
-              HTML ~ CSS ~ JavaScript
-            </p>
-            <p className=" pb-4">
-              I created this game based off of a game called &#34;Pig-Game&#34;.
-              Roll the dice to add points, make sure you lock in your points
-              earned before rolling a 1. First player to 100 wins
-            </p>
-            <a
-              href="https://dustinsoos.github.io/dice-game-to-100/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" bg-black px-8 cursor-pointer text-lg text-white font-semibold hover:underline hover:text-black hover:bg-white"
-            >
-              Live Site
-            </a>
-          </div>
-        </div>
-        <div className="  md:h-fit mx-auto flex flex-col text-center items-center justify-around  md:flex md:flex-row mt-12 md:w-full shadow-xl shadow-black/50  ">
-          <img src={simon} alt="" className="w-full md:w-1/2" />
-          <div className=" text-center flex-col  pb-8 md:pb-0 ">
-            <h3 className=" text-lg font-semibold underline">Simon Game</h3>
-            <p className=" text-md font-medium pt-4 pb-4">
-              HTML ~ CSS ~ JQuery
-            </p>
-            <p className=" pb-4">
-              This is a game I created to practice using JQuery. If you have
-              good memory and can remember the pattern you will have a lot of
-              fun playing this.
-            </p>
-            <a
-              href="https://dustinsoos.github.io/Simon-Game-jQuery/"
               target="_blank"
               rel="noopener noreferrer"
               className=" bg-black px-8 cursor-pointer text-lg text-white font-semibold hover:underline hover:text-black hover:bg-white"
