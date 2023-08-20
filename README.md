@@ -1,3 +1,3 @@
-https://dustinsoos.github.io/react-portfolio/
+https://dustinmsoos.com
 
 live site link
