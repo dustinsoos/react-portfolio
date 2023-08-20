@@ -77,9 +77,8 @@ export default function Main() {
             <p className=" mb-4 ">
               {" "}
               This project is a dynamic website designed to provide an extensive
-              repository of curated learning materials, tutorials, and tools
-              specifically tailored for aspiring and experienced frontend
-              developers
+              repository of curated learning materials and tools specifically
+              tailored for aspiring and experienced frontend developers
             </p>
             <a
               href="https://frontend-assets.vercel.app/"
