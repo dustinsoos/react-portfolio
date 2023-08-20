@@ -72,7 +72,7 @@ export default function Main() {
               Frontend Assets
             </h3>
             <p className=" text-md font-medium pt-4 pb-4">
-              React ~ Tailwind CSS ~ NextJS
+              React | Tailwind CSS | NextJS
             </p>
             <p className=" mb-4 ">
               {" "}
@@ -95,7 +95,7 @@ export default function Main() {
           <div className=" text-center flex-col  pb-8 md:pb-0 ">
             <h3 className=" text-lg font-semibold underline">Little Lemon</h3>
             <p className=" text-md font-medium pt-4 pb-4">
-              React ~ Tailwind CSS ~ NextJS
+              React | Tailwind CSS | NextJS
             </p>
             <p className=" pb-4 ">
               {" "}
@@ -119,7 +119,7 @@ export default function Main() {
               Portfolio Project
             </h3>
             <p className=" text-md font-medium pt-4 pb-4">
-              React ~ Tailwind CSS ~ ViteJS
+              React | Tailwind CSS | ViteJS
             </p>
             <p className=" pb-4">A portfolio showcasing my technical skills.</p>
             <a
